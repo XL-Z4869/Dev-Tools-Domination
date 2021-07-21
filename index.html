@@ -26,28 +26,57 @@
         }
 
         // Regular
-
+        console.log(123);
         // Interpolated
+        console.log("输出一个字符串%s", 'andy');
+        console.log("输出一个数字%f", 1234);
 
         // Styled
-
-        // warning!
+        console.log("%c一段文字", "font-size:20px;color:red")
+            // warning!
+        console.warn("警告")
 
         // Error :|
-
-        // Info
-
+        console.error("错误")
+            // Info
+        console.info('在firefox中出现i字符');
         // Testing
+        const p = document.querySelector('p');
 
-        // clearing
-
-        // Viewing DOM Elements
+        console.assert(p.classList.contains('ouch'), 'That is wrong!');
+        console.assert(false, "错了")
+        console.assert(true, "对了")
+            // clearing
+            // console.clear()
+            // Viewing DOM Elements
+        console.log(p);
+        console.dir(p);
 
         // Grouping together
+        dogs.forEach(dog => {
+            console.groupCollapsed(`${dog.name}`);
+            console.log(`This is ${dog.name}`);
+            console.log(`${dog.name} is ${dog.age} years old`);
+            console.log(`${dog.name} is ${dog.age * 7} dog years old`);
+            console.groupEnd(`${dog.name}`);
+        });
 
         // counting
-
+        console.count('Wes');
+        console.count('Wes');
+        console.count('Steve');
+        console.count('Steve');
+        console.count('Wes');
+        console.count('Steve');
+        console.count('Wes');
+        console.count('Steve');
+        console.count('Steve');
+        console.count('Steve');
+        console.count('Steve');
+        console.count('Steve');
         // timing
+        console.table(dogs)
+        console.table(dogs, 'name')
     </script>
 </body>
 
